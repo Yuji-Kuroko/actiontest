@@ -1,0 +1,14 @@
+name: staging merge
+jobs:
+  staging-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: production -> staging
+        uses: devmasx/merge-branch@v1.3.0
+        with:
+          type: now
+          from_branch: production
+          target_branch: staging
+          github_token: ${{ github.token }}
