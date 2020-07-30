@@ -1,4 +1,7 @@
 name: staging merge
+push:
+  branches:
+    - production
 jobs:
   staging-merge:
     runs-on: ubuntu-latest
