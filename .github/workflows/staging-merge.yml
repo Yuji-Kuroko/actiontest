@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: production -> staging
-        uses: devmasx/merge-branch@v1.3.0
+        uses: Yuji-Kuroko/merge-branch@debug
         with:
           type: now
           from_branch: production
