@@ -13,6 +13,6 @@ jobs:
         uses: Yuji-Kuroko/merge-branch@debug
         with:
           type: now
-          from_branch: production
+          head_to_merge: production
           target_branch: staging
           github_token: ${{ github.token }}
