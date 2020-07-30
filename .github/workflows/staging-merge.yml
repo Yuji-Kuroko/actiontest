@@ -2,7 +2,7 @@ name: staging merge
 on:
   push:
     branches:
-    - production
+      - production
 jobs:
   staging-merge:
     runs-on: ubuntu-latest
@@ -10,9 +10,9 @@ jobs:
       - uses: actions/checkout@master
 
       - name: production -> staging
-        uses: Yuji-Kuroko/merge-branch@debug
+        uses: devmasx/merge-branch@v1.3.0
         with:
           type: now
-          head_to_merge: production
+          head_to_merge: production # from_branchだとエラーになる
           target_branch: staging
           github_token: ${{ github.token }}
