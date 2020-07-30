@@ -1,6 +1,7 @@
 name: staging merge
-push:
-  branches:
+on:
+  push:
+    branches:
     - production
 jobs:
   staging-merge:
